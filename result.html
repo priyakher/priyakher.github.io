@@ -142,6 +142,8 @@
             .siblings('input').prop('checked',true);
   
 
+ document.getElementById("finalResult").style.display="none";
+  document.getElementById("wines").style.display="none";
       }
 
 function send()
@@ -294,7 +296,7 @@ priceSelect.appendChild(opt4);
   function displayResults() {
 
    
-  document.getElementById("finalResult").style.display="block";
+  
 
   var e = document.getElementById("country");
   var selectedCountry = e.options[e.selectedIndex].value;
@@ -345,6 +347,11 @@ var trimmedOutput = uniqueArray.sort(function(a,b)
 }  );
 
 
+if (trimmedOutput.length>0)
+{
+
+document.getElementById("finalResult").style.display="block";
+
 var k=0;
 var table =document.getElementById("outputTable");
 
@@ -385,7 +392,15 @@ var index= trimmedOutput[k];
 
 
 }
+}
 
+else 
+{
+
+  document.getElementById("finalResult").style.display="none";
+alert("Sorry! We do not have wines for this price range in " + selectedCountry);
+
+}
 
    }
 
