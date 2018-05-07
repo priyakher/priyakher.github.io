@@ -81,40 +81,51 @@
       </div>
     </section>
 
-<form method="get" action="result.html">
+<form method="get" action="result.html" name="myForm" onsubmit="return validateForm()">
   
     <section class="p-0" id="portfolio">
+      <br>
       <fieldset id="chk1">
-   <h3 style="color: #FF5733; text-align: center;">Which fruit do you like? <br></h3>
-  <div class="container-fluid p-0" style="margin-left: 5%">
+   <h3 style="color: #FF5733; text-align: center; font-weight: bold;">Which fruit do you like? <br></h3>
+  <div class="container-fluid p-0" >
     
         <div class="row no-gutters popup-gallery">
 
-          <div class="col-sm-3 col-sm-3">
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check " src="img/portfolio/thumbnails/1 1.jpg" alt=""
-              style="height: 75%; width: 75%">
-             <input type="radio" name="chk1" id="item4" value="Mocha "  autocomplete="off">
+              <img class="img-fluid img-check " src="img/portfolio/thumbnails/fruits/berri.jpg" alt="">
+             <input type="radio" name="chk1" id="item1" value="berri"  autocomplete="off">
                    </div>
-        <div class="col-sm-3 col-sm-3">
+       
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/fruits/cherries.jpg" alt=""
                style="height: 75%; width: 75%">
-             <input type="radio" name="chk1" id="item4" value="val1" >
+             <input type="radio" name="chk1" id="item2" value="cherri" >
             
           </div>
-           <div class="col-sm-3 col-sm-3">
            
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+           
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/fruits/lime.jpg" alt=""
               style="height: 75%; width: 75%">
-             <input type="radio" name="chk1" id="item4" value="val1"  >
+             <input type="radio" name="chk1" id="item3" value="lime"  >
             
           </div>
-           <div class="col-sm-3 col-sm-3">
+          
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/fruits/greenGrapes.jpg" alt=""
                style="height: 75%; width: 75%">
-             <input type="radio" name="chk1" id="item4" value="val1" >
+             <input type="radio" name="chk1" id="item4" value="white" >
+            
+          </div>
+         
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+           
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/fruits/redGrapes.jpg" alt=""
+               style="height: 75%; width: 75%">
+             <input type="radio" name="chk1" id="item5" value="red" >
             
           </div>
                      
@@ -124,48 +135,143 @@
       </fieldset>   
 
       <fieldset id="chk2">
-  <h3 style="color: #FF5733; text-align: center;" ">Which fruit do you like? <br></h3>
-  <div class="container-fluid p-0" style="margin-left: 5%">
+  <h3 style="color: #FF5733; text-align: center; font-weight: bold;" >How do you like yor tea? <br></h3>
+  <div class="container-fluid p-0" >
         
         <div class="row no-gutters popup-gallery">
 
-          <div class="col-sm-3 col-sm-3 " >
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/1 1.jpg" alt=""
-              style="height: 75%; width: 75%">
-             <input type="radio" name="chk2" id="item5" value="cherri   "  autocomplete="off">
-                   </div>
-        <div class="col-sm-3 col-sm-3">
-           
-              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/1 1.jpg" alt=""
+              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/fruits/black.jpg" alt=""
                style="height: 75%; width: 75%">
-             <input type="radio" name="chk2" id="item5" value="val1"  autocomplete="off">
+             <input type="radio" name="chk2" id="item5" value="red" >
             
           </div>
-           <div class="col-sm-3 col-sm-3">
+      
+      <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/1 1.jpg" alt=""
-              style="height: 75%; width: 75%">
-             <input type="radio" name="chk2" id="item5" value="val1"  autocomplete="off">
+              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/fruits/roseSweet.jpg" alt=""
+               style="height: 75%; width: 75%">
+             <input type="radio" name="chk2" id="item5" value="red" >
             
           </div>
-           <div class="col-sm-3 col-sm-3">
+
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
            
-              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/1 1.jpg" alt=""
+              <img class="img-fluid img-check2" src="img/portfolio/thumbnails/fruits/herbaltea.jpg" alt=""
                style="height: 75%; width: 75%">
-             <input type="radio" name="chk2" id="item5" value="val1"  autocomplete="off">
+             <input type="radio" name="chk2" id="item5" value="red" >
             
           </div>
          
         
     </fieldset>
     
+<fieldset id="chk3">
+  <h3 style="color: #FF5733; text-align: center; font-weight: bold; ">Which flavor do you like? <br></h3>
+  <div class="container-fluid p-0" >
+        
+        <div class="row no-gutters popup-gallery">
 
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+           
+              <img class="img-fluid img-check3" src="img/portfolio/thumbnails/fruits/chocolat.jpg" alt=""
+               style="height: 75%; width: 75%">
+             <input type="radio" name="chk3" id="item5" value="red" >
+            
+          </div>
+       <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+           
+              <img class="img-fluid img-check3" src="img/portfolio/thumbnails/fruits/lemony.jpg" alt=""
+               style="height: 75%; width: 75%">
+             <input type="radio" name="chk3" id="item5" value="red" >
+            
+          </div>
+      <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+        
+           
+              <img class="img-fluid img-check3" src="img/portfolio/thumbnails/fruits/spice.jpg" alt=""
+               style="height: 75%; width: 75%">
+             <input type="radio" name="chk3" id="item5" value="red" >
+            
+          </div>
+
+         
+         
+        
+    </fieldset>
     </section>
+<center>
+<input type="submit" value="submit" class="btn btn-primary btn-xl" style="text-align: center"  >
+<a class="btn btn-primary btn-xl " onclick="clearchoice()" style="background-color: #BFE3DB " >Clear!</a>
 
-<input type="submit" value="submit" class="btn btn-success" style="text-align: center">
+</center>
       </form>
+<script >
+  function clearchoice()
+      {
 
+      
+   var ele = document.getElementsByName("chk1");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
+
+var ele = document.getElementsByName("chk2");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
+
+    var ele = document.getElementsByName("chk3");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
+    
+        $('.img-check').not(this).removeClass('check')
+        .siblings('input').prop('checked',false);
+      $(this).addClass('check')
+            .siblings('input').prop('checked',true);
+
+  
+  $('.img-check2').not(this).removeClass('check2')
+        .siblings('input').prop('checked',false);
+      $(this).addClass('check2')
+            .siblings('input').prop('checked',true);
+
+  $('.img-check3').not(this).removeClass('check3')
+        .siblings('input').prop('checked',false);
+      $(this).addClass('check3')
+            .siblings('input').prop('checked',true);
+  
+
+      }
+function validateForm()
+
+{
+
+
+ 
+  var x = $('input[name=chk1]:checked').val(); 
+
+  
+      if (x == null) {
+        console.log("hey");
+          alert("Please select fruit");
+          return false;
+      }
+
+    var y = $('input[name=chk2]:checked').val(); 
+    if (y == null) {
+        alert("Please select tea type");
+        return false;
+    }
+
+    var z = $('input[name=chk3]:checked').val(); 
+    if (z == null) {
+        alert("Please select flavor");
+        return false;
+    }
+}
+
+
+</script>
   
     <section id="contact">
       <div class="container">
@@ -223,6 +329,19 @@
         $('.img-check2').not(this).removeClass('check2')
         .siblings('input').prop('checked',false);
       $(this).addClass('check2')
+            .siblings('input').prop('checked',true);
+    });
+      
+  });
+    </script>
+   <script>
+      
+      $(document).ready(function(e){
+        
+      $('.img-check3').click(function(e) {
+        $('.img-check3').not(this).removeClass('check3')
+        .siblings('input').prop('checked',false);
+      $(this).addClass('check3')
             .siblings('input').prop('checked',true);
     });
       

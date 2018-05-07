@@ -59,51 +59,59 @@
   
     <section class="p-0" id="portfolio">
       <fieldset id="chk1">
-   <h3 style="color: #FF5733; text-align: center;">Congratulations!! We have found your  wine </h3>
-   <br/><br/>
-   <h4 style="color: #FF5733; text-align: center;">Select wine type to explore more options</h4>
-  <div class="container-fluid p-0" style="margin-left: 5%">
+     <h4 style="color: #FF5733; text-align: center; font-weight: bold;">We have found your  wines. Select wine type to explore more options</h4>
+  <div class="container-fluid p-0" style=" margin:auto;">
     
-        <div class="row no-gutters popup-gallery">
+        <div class="row no-gutters popup-gallery" style="margin:auto;">
 
-          <div class="col-sm-3 col-sm-3">
-           
-              <img class="img-fluid img-check " src="img/portfolio/thumbnails/1 1.jpg" alt=""
-              style="height: 75%; width: 75%">
+          <div class="col-sm-2 col-sm-2" style="margin:auto;">
+           <label style="text-align: center;"> 
+              <img class="img-fluid img-check " src="img/portfolio/thumbnails/Pinot Noir.png" alt="">
              <input type="radio" name="chk1" id="item4" value="Chardonnay"  autocomplete="off">
+           </br>  Pinot Noir
+             </label>
                    </div>
-        <div class="col-sm-3 col-sm-3">
-           
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
-               style="height: 75%; width: 75%">
+         <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+               <label style="text-align: center;">
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/Chardonnay.png" alt="">
              <input type="radio" name="chk1" id="item4" value="val1" >
-            
+            <br/> Chardonnay
+          </label>
           </div>
-           <div class="col-sm-3 col-sm-3">
-           
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
-              style="height: 75%; width: 75%">
+          <div class="col-sm-2 col-sm-2" style=" margin:auto;">
+           <label style="text-align: center;">
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/Chardonnay.png" alt=""
+              >
              <input type="radio" name="chk1" id="item4" value="val1"  >
-            
+              <br/> Chardonnay
+          </label>
           </div>
-           <div class="col-sm-3 col-sm-3">
-           
-              <img class="img-fluid img-check" src="img/portfolio/thumbnails/1 1.jpg" alt=""
-               style="height: 75%; width: 75%">
+            <div class="col-sm-2 col-sm-2">
+            <label style="text-align: center;" >
+              <img class="img-fluid img-check" src="img/portfolio/thumbnails/Chardonnay.png" alt=""
+                >
              <input type="radio" name="chk1" id="item4" value="val1" >
-            
+              <br/> Chardonnay
+          </label>
           </div>
                      
           </div>
         </div>
       </div>
-      </fieldset>   
+      </fieldset>  
+      <center>
    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#wines" onclick="send()">Explore!</a>
+    <a class="btn btn-primary btn-xl " onclick="clearchoice()" style="background-color: #BFE3DB " >Clear!</a>
+</center> 
+ 
+      
    </section>
 
-   <section id="wines" style="display: none">
+   <section id="wines" style="display: none; margin-left: 10%">
 
 <div class="form-group">
+
+  <h4 style="color: #FF5733; text-align: center; font-weight: bold;"> Please select country and price options</h4>
       <label for="country">Select country (select one):</label>
       <select  class="form-control" id="country" style="display: none; width: auto;">
        
@@ -113,13 +121,44 @@
       
       </select>
     </div>
-    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#finalResult" onclick="displayResults()">Get Results!</a>
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#finalResult" onclick="displayResults()" >Get Results!</a>
   </form>
 </div>
 
 <script >
+      function clearchoice()
+      {
+
       
+   var ele = document.getElementsByName("chk1");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
+
+
+    
+        $('.img-check').not(this).removeClass('check')
+        .siblings('input').prop('checked',false);
+      $(this).addClass('check')
+            .siblings('input').prop('checked',true);
+  
+
+      }
+
 function send()
+{
+
+
+     var selValue = $('input[name=chk1]:checked').val(); 
+
+
+    if (selValue ==null)
+     {
+       console.log("hey");
+       alert("Please select wine");
+      
+    }
+
+else
 {
 
 document.getElementById("wines").style.display="block";
@@ -225,6 +264,7 @@ opt4.innerHTML = pricerange4;
 priceSelect.appendChild(opt4);
 
 }
+}
     </script>
 
 
@@ -235,7 +275,7 @@ priceSelect.appendChild(opt4);
 
     <section id ="finalResult" style="display: none;">
 
-       <table class="table">
+       <table class="table" style="margin-left: 10%; width: 80%">
     <thead>
       <tr>
           <th>Country</th>
@@ -273,7 +313,7 @@ console.log(selectedCountry);
         switch (Number(selectedPrice))
      {
 
-      case 0:  return (currPrice <=25 && index["country"]==selectedCountry ); break;
+      case 0:  return (( currPrice > 0 && currPrice <=25 )&& index["country"]==selectedCountry ); break;
       case 1:  return ((currPrice >25 && currPrice <=50)  && index["country"]==selectedCountry ); break;
 
       case 2:  return ((currPrice >50 && currPrice <=100)  && index["country"]==selectedCountry );break;
